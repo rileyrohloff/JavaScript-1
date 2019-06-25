@@ -79,31 +79,31 @@ const looper = () => {
 }
 
 //console.log(inventory[49]['car_make'] + inventory[49]['car_model']);
-//console.log(looper())
+console.log(looper())
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 let carModels = [];
 
 const sortAlpha = (array) => {
-        for (i = 0; i < lastCar; i++) {
-            carModels.push(array[i]['car_model'])
-        }
-        return carModels
+    for (i = 0; i < lastCar; i++) {
+        carModels.push(array[i]['car_model'])
     }
-    //console.log(sortAlpha(inventory).sort());
+    return carModels
+}
+console.log(sortAlpha(inventory).sort());
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
 let carYears = [];
 
 const onlyYears = (array) => {
-        for (i = 0; i < array.length; i++) {
-            carYears.push(array[i]['car_year'])
-        }
-        return carYears
+    for (i = 0; i < array.length; i++) {
+        carYears.push(array[i]['car_year'])
     }
-    //console.log(onlyYears(inventory).sort());
+    return carYears
+}
+console.log(onlyYears(inventory).sort());
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
