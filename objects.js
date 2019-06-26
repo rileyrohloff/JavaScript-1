@@ -88,16 +88,49 @@ console.log(anty.multiplyNums(3, 4));
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-//const parent = {}
+class Parent {
+    constructor(name, age) {
+        this._name = 'Susan';
+        this._age = 70;
+    }
+    get name() {
+        return this._name
+    }
+    get age() {
+        return this._age
+    }
+    sayName() {
+        console.log('Hi there! My name is, ' + `${this._name}!`)
+    }
+};
 
+class child1 extends Parent {
+    constructor(name, age) {
+        super(name, age)
+        this._name = name;
+        this._age = age;
+    }
+};
+
+class grandchild extends Parent {
+    constructor(name, age) {
+        super(name, age)
+        this._name = name;
+        this._age = age;
+    }
+}
 // Log the parent object's name
-
-// Log the child's age
-
+parent = new Parent()
+console.log(parent.name)
+    // Log the child's age
+child = new child1('George', 50)
+child.sayName();
 // Log the name and age of the grandchild
-
-// Have the parent speak
-
+grandchild = new grandchild('Sam', 30);
+console.log(grandchild.name + ' ' + grandchild.age)
+    // Have the parent speak
+parent.sayName();
 // Have the child speak
-
+child.sayName();
 // Have the grandchild speak
+grandchild.sayName()
