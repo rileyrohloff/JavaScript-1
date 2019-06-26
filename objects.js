@@ -124,7 +124,7 @@ parent = new Parent()
 console.log(parent.name)
     // Log the child's age
 child = new child1('George', 50)
-child.sayName();
+console.log(child.age);
 // Log the name and age of the grandchild
 grandchild = new grandchild('Sam', 30);
 console.log(grandchild.name + ' ' + grandchild.age)
